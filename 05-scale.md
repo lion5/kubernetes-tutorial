@@ -24,7 +24,7 @@ We should have 1 Pod. This shows:
 
 To see the ReplicaSet created by the Deployment, run:
 
-`kubectl get replicasset`
+`kubectl get rs`
 
 Notice that the name of the ReplicaSet is always formatted as `[DEPLOYMENT-NAME]-[RANDOM-STRING]`.
 The random string is randomly generated and uses the pod-template-hash as a seed.

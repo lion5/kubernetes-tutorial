@@ -69,7 +69,7 @@ First we need to get the pod name, and we'll store it in the environment variabl
 
 We also need the current namespace of your group:
 
-`export GROUP_NS=$(kubectl config view --minify -o=jsonpath='{..namespace}');echo Group's namespace: $GROUP_NS`
+`export GROUP_NS=$(kubectl config view --minify -o=jsonpath='{..namespace}');echo Group namespace: $GROUP_NS`
 
 You can access the Pod through the API by running:
 
