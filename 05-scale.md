@@ -79,6 +79,8 @@ Execute the command multiple times:
 We hit a different Pod with every request.
 This demonstrates that the load-balancing is working.
 
+Hint: If you get an error that the `curl` URL has a bad/illegal format or missing URL, please make sure that both `$NODE_IP` and `$NODE_PORT` environment variables are set to a value.
+
 ## Scale Down
 
 To scale down the Service to 2 replicas, run again the scale command:
