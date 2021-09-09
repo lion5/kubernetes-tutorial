@@ -32,7 +32,7 @@ The currently selected context can be printed via:
 
 `kubectl config current-context`
 
-Make sure your current context targets the ` training-cluster.us-east-1.eksctl.io`.
+Make sure your current context targets `arn:aws:eks:us-east-1:935581097791:cluster/training-cluster`.
 If not, switch to the correct context via: `kubectl config use-context replace_with_context_name`
 
 To view the entire kubeconfig, enter this command:
