@@ -7,3 +7,4 @@
 5. [Module 5 - Scale your app](05-scale.md)
 6. [Module 6 - Update your app](06-upgrade.md)
 7. [Module 7 - Declarative Configuration](07-declarative.md)
+8. [Module 8 - Configuring Redis using a ConfigMap](08-configuration.md)
