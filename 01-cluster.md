@@ -8,7 +8,9 @@ To interact with Kubernetes during this bootcamp we’ll use the command line in
 
 To check if `kubectl` is installed you can run the `kubectl version` command:
 
-`kubectl version`
+```shell
+kubectl version
+```
 
 OK, `kubectl` is configured and we can see both, the version of the client as well as the server.
 The client version is the `kubectl` version; the server version is the Kubernetes version installed on the master.
@@ -26,43 +28,57 @@ By default, `kubectl` looks for a file named `config` in the `$HOME/.kube` direc
 
 To view all available contexts run:
 
-`kubectl config get-contexts`
+```shell
+kubectl config get-contexts
+```
 
 The currently selected context can be printed via:
 
-`kubectl config current-context`
+```shell
+kubectl config current-context
+```
 
 Make sure your current context targets `arn:aws:eks:us-east-1:935581097791:cluster/training-cluster`.
 If not, switch to the correct context via: `kubectl config use-context replace_with_context_name`
 
 To view the entire kubeconfig, enter this command:
 
-`kubectl config view`
+```shell
+kubectl config view
+```
 
 ## Cluster details
 
 Let’s view the cluster details.
 We’ll do that by running `kubectl cluster-info`:
 
-`kubectl cluster-info`
+```shell
+kubectl cluster-info
+```
 
 The command prints the address of the K8s control plane and cluster services.
 
 To view the nodes in the cluster, run the `kubectl get nodes` command:
 
-`kubectl get nodes`
+```shell
+kubectl get nodes
+```
 
 This command shows all nodes that can be used to host our applications.
 We can see all available nodes and that their status is ready (they are ready to accept applications for deployment).
 
 We can use the output option `-o wide`, to display more detailed information for most K8s resources:
 
-`kubectl get nodes -o wide`
+```shell
+kubectl get nodes -o wide
+```
 
 Here, we can additionally see the OS image of the nodes and node IPs.
 
 For a fully detailed view of a resource, including usage and events, we can use the `describe` command instead:
 
-`kubectl describe nodes replace_with_node_name`
+```shell
+kubectl describe nodes replace_with_node_name
+```
 
 Adapted from https://kubernetes.io/docs/tutorials/ licenced under [Creative Commons Attribution 4.0 International](https://github.com/kubernetes/website/blob/main/LICENSE).
