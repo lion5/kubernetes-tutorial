@@ -8,3 +8,6 @@
 6. [Module 6 - Update your app](06-upgrade.md)
 7. [Module 7 - Declarative Configuration](07-declarative.md)
 8. [Module 8 - Configuring Redis using a ConfigMap](08-configuration.md)
+9. [Module 9 - Configure two Pods to use a shared PersistentVolume for Storage](09-volume.md)
+10. [Module 10 - Deploying a stateless application](10-stateless-app.md)
+11. [Module 11 - Run a Replicated Stateful Application](11-statefulset.md)
