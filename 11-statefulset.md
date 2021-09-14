@@ -409,7 +409,7 @@ by running a temporary container with the `mysql:5.7` image and running the
 `mysql` client binary.
 
 ```shell
-kubectl run mysql-client --image=mysql:5.7 -i --rm --restart=Never --   mysql -h mysql-0.mysql <<EOF
+kubectl run mysql-client --image=mysql:5.7 -i --rm --restart=Never -- mysql -h mysql-0.mysql <<EOF
 CREATE DATABASE test;
 CREATE TABLE test.messages (message VARCHAR(250));
 INSERT INTO test.messages VALUES ('hello');
@@ -420,8 +420,7 @@ Use the hostname `mysql-read` to send test queries to any server that reports
 being Ready:
 
 ```shell
-kubectl run mysql-client --image=mysql:5.7 -i -t --rm --restart=Never --
-  mysql -h mysql-read -e "SELECT * FROM test.messages"
+kubectl run mysql-client --image=mysql:5.7 -i -t --rm --restart=Never -- mysql -h mysql-read -e "SELECT * FROM test.messages"
 ```
 
 You should get output like this:
