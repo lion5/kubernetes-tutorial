@@ -262,7 +262,7 @@ jQuery-Ajax-based UX.
 
 ### Creating the Guestbook Frontend Deployment
 
-```yaml`
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -333,12 +333,6 @@ from outside the Kubernetes cluster. However a Kubernetes user you can use
 `kubectl port-forward` to access the service even though it uses a
 `ClusterIP`.
 
-{{< note >}}
-Some cloud providers, like Google Compute Engine or Google Kubernetes Engine,
-support external load balancers. If your cloud provider supports load
-balancers and you want to use it, uncomment `type: LoadBalancer`.
-{{< /note >}}
-
 ```yaml
 apiVersion: v1
 kind: Service
@@ -348,10 +342,6 @@ metadata:
     app: guestbook
     tier: frontend
 spec:
-  # if your cluster supports it, uncomment the following to automatically create
-  # an external load-balanced IP for the frontend service.
-  # type: LoadBalancer
-  #type: LoadBalancer
   ports:
     # the port that this service should serve on
   - port: 80
@@ -450,10 +440,10 @@ Retrieve the Ingress resource and wait for the external IP address/DNS to view y
 
    The response should be similar to this:
 
-   ```
+```
 NAME                CLASS   HOSTS   ADDRESS                                                                         PORTS   AGE
 guestbook-ingress   nginx   *       a30be3be54566445c86ca3a56e736230-788d26b13fc29c22.elb.us-east-1.amazonaws.com   80      5m3s
-   ```
+```
 
 1. Copy the external IP/DNS address, and load the page in your browser to view your guestbook. Make sure to append your path postfix, e.g., `/group-1`.
 
@@ -477,12 +467,12 @@ labels to delete multiple resources with one command.
 
    The response should look similar to this:
 
-   ```
-   deployment.apps "redis-follower" deleted
-   deployment.apps "redis-leader" deleted
-   deployment.apps "frontend" deleted
-   service "frontend" deleted
-   ```
+```
+deployment.apps "redis-follower" deleted
+deployment.apps "redis-leader" deleted
+deployment.apps "frontend" deleted
+service "frontend" deleted
+```
 
 1. Query the list of Pods to verify that no Pods are running:
 
