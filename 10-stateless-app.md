@@ -393,6 +393,8 @@ spec:
 
 1. load the page [http://localhost:8080](http://localhost:8080) in your browser to view your guestbook.
 
+_Hint: In AWS Cloud9 use `Tools -> Preview -> Preview running applications` to open the browser on the appropriate remote address._
+
 Try adding some guestbook entries by typing in a message, and clicking Submit.
 The message you typed appears in the frontend. This message indicates that
 data is successfully added to Redis through the Services you created earlier.
