@@ -542,7 +542,7 @@ Watch the new Pods come up by running:
 kubectl get pods -l app=mysql --watch
 ```
 
-Once they're up, you should see server IDs `103` and `104` start appearing in
+Once they're up, you should see server ID `103` start appearing in
 the `SELECT @@server_id` loop output.
 
 You can also verify that these new servers have the data you added before they
