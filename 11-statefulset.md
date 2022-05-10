@@ -35,11 +35,13 @@ data:
   primary.cnf: |
     # Apply this config only on the primary.
     [mysqld]
-    log-bin    
+    log-bin
+    datadir=/var/lib/mysql/mysql
   replica.cnf: |
     # Apply this config only on replicas.
     [mysqld]
-    super-read-only    
+    super-read-only
+    datadir=/var/lib/mysql/mysql
 
 ```
 
