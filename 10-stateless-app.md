@@ -465,6 +465,7 @@ labels to delete multiple resources with one command.
    kubectl delete service -l app=redis
    kubectl delete deployment frontend
    kubectl delete service frontend
+   kubectl delete ingress guestbook-ingress
    ```
 
    The response should look similar to this:
