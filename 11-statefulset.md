@@ -35,16 +35,15 @@ data:
   primary.cnf: |
     # Apply this config only on the primary.
     [mysqld]
-    log-bin    
+    log-bin
   replica.cnf: |
     # Apply this config only on replicas.
     [mysqld]
-    super-read-only    
-
+    super-read-only
 ```
 
 ```shell
-kubectl apply -f https://k8s.io/examples/application/mysql/mysql-configmap.yaml
+kubectl apply -f replace_with_filename
 ```
 
 This ConfigMap provides `my.cnf` overrides that let you independently control
@@ -94,7 +93,7 @@ spec:
 ```
 
 ```shell
-kubectl apply -f https://k8s.io/examples/application/mysql/mysql-services.yaml
+kubectl apply -f replace_with_filename
 ```
 
 The Headless Service provides a home for the DNS entries that the StatefulSet
