@@ -409,13 +409,13 @@ kind: Ingress
 metadata:
   name: guestbook-ingress
   annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/rewrite-target: /$2
 spec:
   ingressClassName: nginx
   rules:
   - http:
       paths:
-      - path: /group-1
+      - path: /group1(/|$)(.*)
         pathType: Prefix
         backend:
           service:
