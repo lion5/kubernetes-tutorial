@@ -417,7 +417,7 @@ spec:
   rules:
   - http:
       paths:
-      - path: /group1(/|$)(.*)
+      - path: /group-1(/|$)(.*)
         pathType: Prefix
         backend:
           service:
